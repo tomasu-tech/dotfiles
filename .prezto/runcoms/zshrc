@@ -6,20 +6,18 @@
 #
 
 #--------------------------------------------------------
-# zplug
+# zinit
 #--------------------------------------------------------
-export ZPLUG_HOME=/opt/homebrew/opt/zplug
-source $ZPLUG_HOME/init.zsh
-zplug "plugins/web-search", from:oh-my-zsh
-zplug "plugins/history", from:oh-my-zsh
-zplug load
+source /usr/local/opt/zinit/zinit.zshex
+# 使用したいpluginを記載
+zinit self-update
 
 #--------------------------------------------------------
 # prezto
 #--------------------------------------------------------
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-  autoload -U promptinit; promptinit
+  autoload 3-U promptinit; promptinit
   prompt pure
 fi
 
@@ -38,7 +36,6 @@ eval "$(jump shell)"
 #--------------------------------------------------------
 # alias
 #--------------------------------------------------------
-alias emacs="emacs -nw"
 alias la="ls -aFG"
 alias ls="ls -FG"
 alias ll="ls -alFG"
@@ -49,9 +46,15 @@ alias brewx="arch -x86_64 /usr/local/bin/brew"
 # path
 #--------------------------------------------------------
 # see zprofile.
+
 #--------------------------------------------------------
 # functions
 #--------------------------------------------------------
 function md (){
   open -a Typora $1
+}
+
+# docker hubのイメージタグを検索する関数
+function docker-tags {
+  curl -s https://registry.hub.docker.com/v1/repositories/$1/tags | jq -r '.[].name'
 }

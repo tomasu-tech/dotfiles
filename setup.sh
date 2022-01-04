@@ -16,7 +16,7 @@ xcode-select --install
 # homebrew(arm64)
 #------------------------------------------
 echo "Installing homebrew..."
-which /opt/homebrew/bin/brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+which /opt/homebrew/bin/brew >/dev/null 2>&1 || arch /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 echo "Executing brew doctor..."
 which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew doctor
@@ -63,8 +63,4 @@ echo "Creating symlinks..."
 echo "Running brew cleanup..."
 which brew >/dev/null 2>&1 && brew cleanup --verbose
 
-
-
-### zplug install(zshプラグイン管理)
-echo "Installing zplug..."
-exec $SHELL -l && zplug install
+exec $SHELL -l 
