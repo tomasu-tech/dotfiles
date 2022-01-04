@@ -1,0 +1,33 @@
+### ignore all ###
+/*
+/.**
+
+### not ignore ###
+!/.prezto/
+!/.prezto/runcoms/
+!/.prezto/runcoms/README.md
+!/.prezto/runcoms/zlogin
+!/.prezto/runcoms/zlogout
+!/.prezto/runcoms/zpreztorc
+!/.prezto/runcoms/zprofile
+!/.prezto/runcoms/zshenv
+!/.prezto/runcoms/zshrc
+
+!/.emacs.d/
+!/.emacs.d/init.el
+!/.emacs.d/lisp/
+!/.emacs.d/lisp/**
+
+!/.Brewfile
+!/.Brewfile_x86_64
+!/.gitconfig
+!/.tmux.conf
+!/.asdfrc
+!/setup.sh
+!/_link.sh
+!/_asdf.sh
+!/_anyenv.sh
+
+!/README.md
+!/LICENCE
+!.gitignore

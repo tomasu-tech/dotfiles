@@ -1,0 +1,28 @@
+[user]
+	name = Tomasu Ishii
+	email = tomasu.ishii@gmail.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+	st = status
+	b = branch
+	ps = push
+	pl = pull
+	co = commit
+	sh = show
+	ch = checkout
+	graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
+[init]
+	defaultBranch = main
+[core]
+	editor = vi
+	autocrlf = input
+	quotepath = false
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true

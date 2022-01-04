@@ -1,0 +1,57 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+#--------------------------------------------------------
+# zplug
+#--------------------------------------------------------
+export ZPLUG_HOME=/opt/homebrew/opt/zplug
+source $ZPLUG_HOME/init.zsh
+zplug "plugins/web-search", from:oh-my-zsh
+zplug "plugins/history", from:oh-my-zsh
+zplug load
+
+#--------------------------------------------------------
+# prezto
+#--------------------------------------------------------
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+  autoload -U promptinit; promptinit
+  prompt pure
+fi
+
+# Customize to your needs...
+#--------------------------------------------------------
+# asdf(arm64) / anyenv(x86_64)
+#--------------------------------------------------------
+[ `uname -m` = 'arm64' ] && . /opt/homebrew/opt/asdf/libexec/asdf.sh
+[ `uname -m` = 'x86_64' ] && eval "$(anyenv init -)"
+
+#--------------------------------------------------------
+# jump
+#--------------------------------------------------------
+eval "$(jump shell)"
+
+#--------------------------------------------------------
+# alias
+#--------------------------------------------------------
+alias emacs="emacs -nw"
+alias la="ls -aFG"
+alias ls="ls -FG"
+alias ll="ls -alFG"
+alias dc="docker-compose"
+alias do="docker"
+alias brewx="arch -x86_64 /usr/local/bin/brew"
+#--------------------------------------------------------
+# path
+#--------------------------------------------------------
+# see zprofile.
+#--------------------------------------------------------
+# functions
+#--------------------------------------------------------
+function md (){
+  open -a Typora $1
+}
