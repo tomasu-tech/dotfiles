@@ -8,9 +8,8 @@
 echo "Installing Command Line Tools for Xcode..."
 xcode-select --install
 
-# Prezto
-[ ! -d ${ZDOTDIR:-$HOME}/.zprezto ] && git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-
+# zinit
+[ ! -d ${ZDOTDIR:-$HOME}/.zinit ] && sh -c "$(curl -fsSL https://git.io/zinit-install)"
 
 #------------------------------------------
 # homebrew(arm64)
