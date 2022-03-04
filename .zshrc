@@ -51,15 +51,26 @@ alias brewx="arch -x86_64 /usr/local/bin/brew"
 # path
 #--------------------------------------------------------
 # see zprofile.
-
+export SPRING_PROFILES_ACTIVE=local
+export M2_HOME=/usr/local/Cellar/maven/3.8.1/libexec/
+export PATH=$M2_HOME/bin:$PATH
+export LC_ALL="ja_JP.UTF-8"
 #--------------------------------------------------------
 # functions
 #--------------------------------------------------------
-function md (){
-  open -a Typora $1
-}
 
-# docker hubのイメージタグを検索する関数
-function docker-tags {
-  curl -s https://registry.hub.docker.com/v1/repositories/$1/tags | jq -r '.[].name'
-}
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/tom/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/tom/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/tom/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/tom/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

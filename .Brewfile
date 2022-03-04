@@ -5,19 +5,15 @@ tap "homebrew/core"
 tap "heroku/brew"
 
 cask "google-chrome"
-cask "box-drive"
 cask "emacs"
 cask "visual-studio-code"
-cask "microsoft-office"
-cask "microsoft-teams"
-cask "zoom"
+cask "dbeaver-community"
 cask "alfred"
-cask "typora"
+cask "mark-text"
 cask "postman"
 cask "drawio"
 cask "font-jetbrains-mono"
 cask "choosy"
-cask "firefox"
 
 cask "docker"
 brew "docker"
@@ -43,6 +39,5 @@ brew "shared-mime-info"
 brew "yarn"
 brew "hstr"
 
-mas "CyberDuck", id: 409222199
 mas "Xcode ", id: 497799835
-mas "feedly. Read more, know more.", id: 865500966
+mas "RunCat (9.6)", id: 1429033973

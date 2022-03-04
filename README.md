@@ -10,7 +10,6 @@ cd dotfiles
 # 手動でインストールが必要なアプリケーション
 - Karabiner-Elements
 - Karabiner-ElementViewer
-- adobe xd
 - BetterTouchTool
 - Google日本語入力
 
