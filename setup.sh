@@ -49,8 +49,8 @@ echo "Running brew upgrade(x86_64)..."
 which /usr/local/bin/brew >/dev/null 2>&1 && arch -x86_64 /usr/local/bin/brew upgrade --verbose
 
 ### bundle with .Brewfile
-echo "Installing apps with .Brewfile_x86_64)..."
-which /usr/local/bin/brew >/dev/null 2>&1 && arch -x86_64 /usr/local/bin/brew bundle --file ./.Brewfile_x86_64 --verbose
+echo "Installing apps with .Brewfile)..."
+which /usr/local/bin/brew >/dev/null 2>&1 && arch -x86_64 /usr/local/bin/brew bundle --file ./.Brewfile --verbose
 
 echo "Running brew cleanup..."
 which /usr/local/bin/brew >/dev/null 2>&1 && arch -x86_64 /usr/local/bin/brew cleanup --verbose

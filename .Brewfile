@@ -1,43 +1,47 @@
+# アプリケーションインストール先の指定
 cask_args appdir: "/Applications"
+
+# アプリケーションをインストールする元リポジトリの指定
+tap "homebrew/core"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
-tap "homebrew/core"
 tap "heroku/brew"
 
+# caskで入れるのはデスクトップアプリケーション
 cask "google-chrome"
-cask "emacs"
+cask "box-drive"
 cask "visual-studio-code"
-cask "dbeaver-community"
+cask "microsoft-teams"
+cask "zoom"
 cask "alfred"
-cask "mark-text"
 cask "postman"
 cask "drawio"
-cask "font-jetbrains-mono"
-cask "choosy"
-
+cask "firefox"
 cask "docker"
-brew "docker"
+cask "iterm2"
 
+# brewで入れるのはCLIアプリケーション
 brew "asdf"
-brew "tmux"
+brew "docker"
 brew "jq"
 brew "ag"
 brew "jump"
-brew "pure"
 brew "mas"
 brew "fzf"
 brew "tree"
 brew "bat"
 brew "gpg"
-brew "zplug"
-brew "heroku"
 brew "awscli"
 brew "git"
 brew "git-lfs"
-brew "mysql-connector-c"
-brew "shared-mime-info"
+brew "v8@3.15"
 brew "yarn"
 brew "hstr"
 
-mas "Xcode ", id: 497799835
-mas "RunCat (9.6)", id: 1429033973
+# masで入れるのはMac App Store上のアプリケーション
+mas "Xcode", id: 497799835
+mas "Display Menu", id: 549083868
+mas "RunCat", id: 1429033973
+mas "Magnet マグネット", id: 441258766
+mas "Spark - メールアプリ by Readdle", id: 1176895641
+mas "ZIPANG", id: 882655968

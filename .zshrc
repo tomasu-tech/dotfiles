@@ -28,10 +28,10 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zdharma-continuum/history-search-multi-word
 # Customize to your needs...
 #--------------------------------------------------------
-# asdf(arm64) / anyenv(x86_64)
+# asdf
 #--------------------------------------------------------
 [ `uname -m` = 'arm64' ] && . /opt/homebrew/opt/asdf/libexec/asdf.sh
-[ `uname -m` = 'x86_64' ] && eval "$(anyenv init -)"
+[ `uname -m` = 'x86_64' ] && . /usr/local/opt/asdf/asdf.sh
 
 #--------------------------------------------------------
 # jump
@@ -58,19 +58,3 @@ export LC_ALL="ja_JP.UTF-8"
 #--------------------------------------------------------
 # functions
 #--------------------------------------------------------
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/tom/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/tom/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/tom/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/tom/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
