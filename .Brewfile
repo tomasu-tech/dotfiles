@@ -16,7 +16,7 @@ cask "postman"
 cask "drawio"
 cask "firefox"
 cask "docker"
-cask "iterm2"
+cask "warp"
 
 # brewで入れるのはCLIアプリケーション
 brew "asdf"
