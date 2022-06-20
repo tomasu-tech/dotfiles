@@ -8,13 +8,10 @@ tap "homebrew/cask-fonts"
 tap "heroku/brew"
 
 # caskで入れるのはデスクトップアプリケーション
-cask "google-chrome"
 cask "visual-studio-code"
-cask "zoom"
 cask "alfred"
 cask "postman"
 cask "drawio"
-cask "firefox"
 cask "docker"
 cask "warp"
 
@@ -32,7 +29,6 @@ brew "gpg"
 brew "awscli"
 brew "git"
 brew "git-lfs"
-brew "v8@3.15"
 brew "yarn"
 brew "hstr"
 
