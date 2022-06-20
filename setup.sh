@@ -8,14 +8,14 @@
 echo "Installing Command Line Tools for Xcode..."
 xcode-select --install
 
-# zinit
-[ ! -d ${ZDOTDIR:-$HOME}/.zinit ] && sh -c "$(curl -fsSL https://git.io/zinit-install)"
+# rosetta install
+sudo softwareupdate --install-rosetta --agree-to-licensesudo softwareupdate --install-rosetta --agree-to-license
 
 #------------------------------------------
 # homebrew(arm64)
 #------------------------------------------
 echo "Installing homebrew..."
-which /opt/homebrew/bin/brew >/dev/null 2>&1 || arch /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+which /opt/homebrew/bin/brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 echo "Executing brew doctor..."
 which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew doctor
@@ -33,33 +33,8 @@ which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew bundle --file ./.Brewfile -
 echo "Running brew cleanup..."
 which brew >/dev/null 2>&1 && brew cleanup --verbose
 
-#------------------------------------------
-# homebrew(x86_64)
-#------------------------------------------
-echo "Installing homebrew(x86_64)..."
-which /usr/local/bin/brew >/dev/null 2>&1 || arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-echo "Executing brew doctor(x86_64)..."
-which /usr/local/bin/brew >/dev/null 2>&1 && arch -x86_64 /usr/local/bin/brew doctor
-
-echo "Running brew update(x86_64)..."
-which /usr/local/bin/brew >/dev/null 2>&1 && arch -x86_64 /usr/local/bin/brew update --verbose
-
-echo "Running brew upgrade(x86_64)..."
-which /usr/local/bin/brew >/dev/null 2>&1 && arch -x86_64 /usr/local/bin/brew upgrade --verbose
-
-### bundle with .Brewfile
-echo "Installing apps with .Brewfile)..."
-which /usr/local/bin/brew >/dev/null 2>&1 && arch -x86_64 /usr/local/bin/brew bundle --file ./.Brewfile --verbose
-
-echo "Running brew cleanup..."
-which /usr/local/bin/brew >/dev/null 2>&1 && arch -x86_64 /usr/local/bin/brew cleanup --verbose
-
 ### create symbolic links
 echo "Creating symlinks..."
 ./_link.sh
 
-echo "Running brew cleanup..."
-which brew >/dev/null 2>&1 && brew cleanup --verbose
-
-exec $SHELL -l 
+exec $SHELL -l
