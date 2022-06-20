@@ -9,9 +9,7 @@ tap "heroku/brew"
 
 # caskで入れるのはデスクトップアプリケーション
 cask "google-chrome"
-cask "box-drive"
 cask "visual-studio-code"
-cask "microsoft-teams"
 cask "zoom"
 cask "alfred"
 cask "postman"
