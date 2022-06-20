@@ -1,10 +1,9 @@
 # Dotfiles 
 
-## usage
+## スクリプトの実行
+ターミナル起動 & スクリプト実行
 ```shell
-git clone $this_repository
-cd dotfiles
-./setup.sh
+bash -c "$( curl -fsSL https://raw.github.com/tomlle/dotfiles/master/setup.sh )"
 ```
 
 # 手動でインストールが必要なアプリケーション
