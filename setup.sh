@@ -33,6 +33,10 @@ which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew bundle --file ./.Brewfile -
 echo "Running brew cleanup..."
 which brew >/dev/null 2>&1 && brew cleanup --verbose
 
+### setup asdf
+echo "Setup asdf..."
+./_asdf.sh
+
 ### create symbolic links
 echo "Creating symlinks..."
 ./_link.sh
