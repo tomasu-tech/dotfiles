@@ -6,16 +6,9 @@
 bash -c "$( curl -fsSL https://raw.github.com/tomlle/dotfiles/master/setup.sh )"
 ```
 
-# 手動でインストールが必要なアプリケーション
+## おまけ
+### 手動インストール
+- Google日本語入力
 - Karabiner-Elements
 - Karabiner-ElementViewer
 - BetterTouchTool
-- Google日本語入力
-
-# その他
-
-## vscode
-vscodeのアカウント上で設定を管理。ログインアカウントはGitHubアカウント
-
-## Alfred
-iCloudの環境構築フォルダで設定ファイル管理。
