@@ -18,8 +18,5 @@ cd dotfiles
 ## vscode
 vscodeのアカウント上で設定を管理。ログインアカウントはGitHubアカウント
 
-## item2
-iCloudの環境構築フォルダで設定ファイル管理。Preferences→General→Preferences→「Load preferences from a custom folder or URL」にiCloudのパスを指定
-
 ## Alfred
 iCloudの環境構築フォルダで設定ファイル管理。
