@@ -9,6 +9,7 @@ tap "heroku/brew"
 
 # caskで入れるのはデスクトップアプリケーション
 cask "visual-studio-code"
+cask "google-chrome"
 cask "alfred"
 cask "postman"
 cask "drawio"
@@ -33,7 +34,6 @@ brew "yarn"
 brew "hstr"
 
 # masで入れるのはMac App Store上のアプリケーション
-mas "Xcode", id: 497799835
 mas "Display Menu", id: 549083868
 mas "RunCat", id: 1429033973
 mas "Magnet マグネット", id: 441258766

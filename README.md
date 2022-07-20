@@ -12,3 +12,4 @@ bash -c "$( curl -fsSL https://raw.github.com/tomlle/dotfiles/master/setup.sh )"
 - Karabiner-Elements
 - Karabiner-ElementViewer
 - BetterTouchTool
+- DisplayLink Manager
