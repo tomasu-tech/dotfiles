@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# simple dotfiles
+# シンボリックリンクの作成
 DOT_FILES=".gitconfig .asdfrc .zshrc .zprofile"
 for file in $DOT_FILES
 do

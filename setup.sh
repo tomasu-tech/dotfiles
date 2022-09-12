@@ -1,44 +1,41 @@
 #!/bin/bash
 
-## prerequisite
-## You have to login to Mac App Store before use this.
+## 前提条件
+## Mac App Storeへのログインが必要です。
 
-
-# Command Line Tools
-echo "Installing Command Line Tools for Xcode..."
+echo "Xcodeをインストールします..."
 xcode-select --install
 
-# rosetta install
+# rosettaのインストール
 sudo softwareupdate --install-rosetta --agree-to-licensesudo softwareupdate --install-rosetta --agree-to-license
 
 #------------------------------------------
 # homebrew(arm64)
 #------------------------------------------
-echo "Installing homebrew..."
+echo "homebrewをインストールします..."
 which /opt/homebrew/bin/brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-echo "Executing brew doctor..."
+echo "brew doctorを実行します..."
 which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew doctor
 
-echo "Running brew update..."
+echo "brew updateを実行します..."
 which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew update --verbose
 
-echo "Running brew upgrade..."
+echo "brew upgradeを実行します..."
 which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew upgrade --verbose
 
-### bundle with .Brewfile
-echo "Installing apps with .Brewfile..."
+echo ".Brewfileで管理しているアプリケーションをインストールします..."
 which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew bundle --file ./.Brewfile --verbose
 
-echo "Running brew cleanup..."
+echo "brew cleanupを実行します..."
 which brew >/dev/null 2>&1 && brew cleanup --verbose
 
-### setup asdf
-echo "Setup asdf..."
+### プログラミング言語のインストール
+echo "プログラミング言語をインストールします..."
 ./_asdf.sh
 
-### create symbolic links
-echo "Creating symlinks..."
+### シンボリックリンクの作成
+echo "シンボリックリンクを作成します..."
 ./_link.sh
 
 exec $SHELL -l
