@@ -1,13 +1,11 @@
-# アプリケーションインストール先の指定
+# インストール先の指定
 cask_args appdir: "/Applications"
 
-# アプリケーションをインストールする元リポジトリの指定
+# 外部ライブラリをインストール
 tap "homebrew/core"
 tap "homebrew/cask"
-tap "homebrew/cask-fonts"
-tap "heroku/brew"
 
-# caskで入れるのはデスクトップアプリケーション
+# デスクトップアプリケーションの管理
 cask "visual-studio-code"
 cask "google-chrome"
 cask "alfred"
@@ -16,7 +14,7 @@ cask "drawio"
 cask "docker"
 cask "warp"
 
-# brewで入れるのはCLIアプリケーション
+# CLIアプリケーションの管理
 brew "asdf"
 brew "docker"
 brew "jq"
@@ -33,9 +31,7 @@ brew "git-lfs"
 brew "yarn"
 brew "hstr"
 
-# masで入れるのはMac App Store上のアプリケーション
+# App Storeのアプリケーションを管理
 mas "Display Menu", id: 549083868
 mas "RunCat", id: 1429033973
 mas "Magnet マグネット", id: 441258766
-mas "Spark - メールアプリ by Readdle", id: 1176895641
-mas "ZIPANG", id: 882655968
