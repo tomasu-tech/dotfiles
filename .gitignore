@@ -4,11 +4,10 @@
 
 ### not ignore ###
 !/.Brewfile
-!/.Brewfile_x86_64
 !/.gitconfig
-!/.asdfrc
 !/setup.sh
 !/.zshrc
+!/.zprofile
 !/_link.sh
 !/_asdf.sh
 !/_anyenv.sh
