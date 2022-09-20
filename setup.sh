@@ -1,8 +1,5 @@
 #!/bin/bash
 
-## 前提条件
-## Mac App Storeへのログインが必要です。
-
 echo "Xcodeをインストールします..."
 xcode-select --install
 
